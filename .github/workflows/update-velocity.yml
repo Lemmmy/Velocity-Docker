@@ -1,0 +1,24 @@
+name: Update Velocity
+
+on: 
+  schedule:
+    - cron: '0 */6 * * *'
+  push:
+    paths:
+      - ".github/scripts/*.mjs"
+      - ".github/workflows/*.yml"
+      - "entrypoint.sh"
+  workflow_dispatch:
+
+jobs:
+  update-velocity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PAT }}
+
+      - name: Fetch latest Velocity version
+        run: npx zx ./.github/scripts/update-velocity.mjs
+        shell: bash
