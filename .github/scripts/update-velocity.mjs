@@ -66,7 +66,7 @@ await $`git config user.email github-actions@github.com`
 
 await $`git add .`
 
-const commitMessage = `ci(auto): update Velocity to ${build.version}\n\n${build.summary}`;
+const commitMessage = `ci(auto): update Velocity to ${versionName}\n\n${build.summary}`;
 const gitAdd = $`git commit -F -`
 gitAdd.stdin.write(commitMessage);
 gitAdd.stdin.end();
