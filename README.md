@@ -1,3 +1,7 @@
+# NOTE
+
+This is an experimental repository and is not recommended to be used in production. For a more stable, tried-and-tested Docker solution for Velocity and BungeeCord, check out [itzg/docker-bungeecord](https://github.com/itzg/docker-bungeecord/). itzg's offering supports BungeeCord, Waterfall and Velocity, has a comprehensive collection of environment variables for configuration, updates the proxy software immediately on startup, and generally has much better support.
+
 # Velocity-Docker
 
 Automatically updated Docker images for the
