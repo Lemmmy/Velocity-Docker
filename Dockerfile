@@ -8,7 +8,7 @@ RUN apk add curl
 
 # Do not update this URL! It is updated automatically every 6 hours by the
 # workflow at `.github/scripts/update-velocity.mjs`
-RUN curl -fsSLO https://api.papermc.io/v2/projects/velocity/versions/3.1.2-SNAPSHOT/builds/206/downloads/velocity-3.1.2-SNAPSHOT-206.jar
+RUN curl -fsSLO https://api.papermc.io/v2/projects/velocity/versions/3.1.2-SNAPSHOT/builds/207/downloads/velocity-3.1.2-SNAPSHOT-207.jar
 
 # Verifies the sha256 checksum of the downloaded jar.
 COPY sha256sums.txt .
